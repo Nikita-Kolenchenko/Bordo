@@ -1,0 +1,15 @@
+@import "./header.css";
+@import "./footer.css";
+
+html,
+body {
+  scroll-behavior: smooth; /* Плавный скрол при навигации */
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  overflow-x: hidden;
+}

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    ` --- CSS --- `
+
+    <link rel="stylesheet" href="./css/main/main.css" />
+    <link rel="stylesheet" href="./css/main/btn-img.css" />
+    <link rel="stylesheet" href="./css/main/cart.css" />
+    <link rel="stylesheet" href="./css/main/animate.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main/card.css" />
+
+    <link rel="icon" href="./images/favicon/favicon.png" />
+    <title>Bordo</title>
+
+    ` --- JS --- `
+
+    <script type="module" src="./js/main.js" defer></script>
+    <script src="./js/scroll.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="#">BORDO</a>
+      <nav class="menu">
+        <span class="menu-2">
+          <a href="#starters">starters</a>
+          <a href="#mains">mains</a>
+          <a href="#desserts">desserts</a>
+          <a href="#drinks">drinks</a>
+          <a href="#contacts">contacts</a>
+        </span>
+        <span id="extendedMenu">
+          <span class="starters Menu active">
+            <a id="startersHot">hot</a>
+            <a id="startersCold">cold</a>
+            <a id="startersVegetarian">vegetarian</a>
+          </span>
+          <span class="mains Menu">
+            <a id="mainsMeat">meat</a>
+            <a id="mainsPizza">pizza</a>
+            <a id="mainsSoup">soup</a>
+          </span>
+          <span class="desserts Menu">
+            <a id="dessertsCake">cake</a>
+            <a id="dessertsPie">pie</a>
+          </span>
+          <span class="drinks Menu">
+            <a id="drinksCold">cold</a>
+            <a id="drinksCocktails">cocktails</a>
+            <a id="drinksBeer">beer</a>
+          </span>
+        </span>
+      </nav>
+      <button onclick="cart.showModal()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="21"
+          height="21"
+          fill="currentColor"
+          class="bi bi-heart-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
+          />
+        </svg>
+      </button>
+    </header>
+    <main id="menu-container"></main>
+    <dialog id="cart">
+      <div class="cart-content">
+        <div class="dialog-header">
+          <h2>basket</h2>
+          <button>
+            <svg
+              onclick="cart.close()"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14" />
+              <path d="M12 5v14" />
+            </svg>
+          </button>
+        </div>
+        <div class="card-list-empty">
+          <p class="card-empty-p">your cart is empty</p>
+          <button onclick="cart.close()" class="card-empty-btn">
+            go to menu
+          </button>
+        </div>
+        <ul class="card-list"></ul>
+        <span class="cart-sum">
+          <a>Total:</a>
+          <p>0</p>
+        </span>
+      </div>
+    </dialog>
+
+    <footer id="contacts">
+      <span class="footer-top">
+        <a href="#">bordo</a>
+      </span>
+      <span class="footer-main">
+        <span class="footer-middle">
+          <a
+            title="show on map"
+            style="margin-top: 10px"
+            href="https://maps.app.goo.gl/8WsWihCeFeLVviVF8"
+            target="_blank"
+          >
+            42 Wardour St, London W1D 6PX</a
+          >
+          <a title="copy" class="copy-link cursor-1">+44 20 7946 0852</a>
+          <a style="cursor: default">Mon – Sun: 11:00 – 23:00</a>
+        </span>
+      </span>
+      <div class="footer-bottom">
+        <a class="text-center">website for online restaurant menus</a>
+        <a class="text-right">© 2026 Bordo.com, Inc</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+/* ⚪ IMG ⚪ */
+
+img {
+  /* ⚪ IMG-CARD ⚪ */
+  background-color: #121212;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  margin-bottom: auto;
+  display: flex;
+  width: 180px;
+  height: 180px;
+  margin: 10px;
+}
+
+/* ⚪ BTN ⚪ */
+
+.stepper-container {
+  position: relative;
+}
+
+.main-btn {
+  font-family: "Roboto", sans-serif;
+  width: 185px;
+  justify-content: center;
+  gap: 2%;
+  align-items: center;
+  display: flex;
+  background-color: #121212;
+  border: none;
+  border-radius: 15px;
+  color: #f5f5f5;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 11px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.counter-controls {
+  font-family: "Roboto", sans-serif;
+  width: 185px;
+  justify-content: center;
+  gap: 20%;
+  align-items: center;
+  display: flex;
+  background-color: #121212;
+  border: none;
+  border-radius: 15px;
+  color: #f5f5f5;
+  padding: 10px 0;
+  margin: 0 auto;
+  margin-top: 11px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.minus,
+.plus {
+  display: flex;
+  border: none;
+  background: none;
+  transition: all 0.1s;
+  color: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+/* Анимация сработает ТОЛЬКО на компьютерах */
+@media (hover: hover) {
+  .main-btn:hover {
+    background-color: #8b1a1a;
+    color: #121212;
+  }
+  .main-btn:active {
+    transform: scale(0.97);
+  }
+  .minus,
+  .plus {
+    &:active {
+      transform: scale(0.97);
+    }
+    &:hover {
+      color: #8b1a1a;
+    }
+  }
+}
+
+/* Стили для телефонов (нажатие) */
+@media (hover: none) {
+  .main-btn:active {
+    transform: scale(0.97);
+  }
+  .minus,
+  .plus {
+    &:active {
+      transform: scale(0.97);
+      color: #8b1a1a;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .counter-controls {
+    width: 150px;
+    padding: 7px 0px;
+    font-size: 12px;
+    margin-top: 6px;
+    margin-bottom: 5px;
+  }
+  .main-btn {
+    width: 150px;
+    padding: 8px;
+    font-size: 12px;
+    margin-top: 6px;
+    margin-bottom: 5px;
+  }
+  img {
+    width: 148px;
+    height: 148px;
+    margin: 6px;
+  }
+}

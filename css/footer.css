@@ -1,0 +1,120 @@
+/* ⚪ Footer */
+
+footer {
+  width: 99.9%;
+  justify-content: center;
+  display: block;
+  background-color: #1e1e1e;
+  height: auto;
+  color: #f5f5f5;
+  margin: 0;
+  border: 1px solid #333;
+  border-radius: 5px 5px 0 0;
+}
+
+/* ⚪ */
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 5px;
+}
+.footer-middle {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #333;
+}
+
+/* 🟡 top */
+
+.footer-top a {
+  color: #f5f5f5;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  font-family: "Geist", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* ⚪ middle */
+
+.footer-middle a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 5px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.cursor-1 {
+  cursor: pointer;
+}
+.cursor-2 {
+  cursor: default;
+}
+
+/* ⚪ bottom */
+
+.footer-bottom a {
+  font-size: 14px;
+  cursor: default;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+/* И "пустышка", и правый текст получают одинаковую ширину */
+.spacer,
+.text-right {
+  flex: 1;
+}
+
+.text-right {
+  color: #f5f5f5;
+  text-align: right;
+}
+
+.text-center {
+  color: #444444;
+  /* Текст в центре не растягивается, он просто стоит посередине */
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+/* Анимация сработает ТОЛЬКО на компьютерах */
+@media (hover: hover) {
+  .text-center:hover {
+    color: #f5f5f5;
+  }
+  .footer-middle a:hover {
+    color: #8b1a1a;
+  }
+}
+
+/* Стили для телефонов (нажатие) */
+@media (hover: none) {
+  .footer-middle a:hover {
+    transform: scale(0.97);
+  }
+}

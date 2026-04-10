@@ -1,0 +1,13 @@
+.animate {
+  animation: shadow-move 1.5s;
+}
+
+@keyframes shadow-move {
+  0%,
+  100% {
+    border: 1px solid #333;
+  }
+  50% {
+    border: 1px solid #8b1a1a;
+  }
+}
