@@ -12,3 +12,10 @@ body {
   font-family: Arial, sans-serif;
   background-color: #121212;
 }
+
+input,
+button,
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+}

@@ -17,8 +17,6 @@ document.querySelectorAll(".card").forEach((card) => {
 initEvents(cardList);
 
 // Запуск приложения
-generateAllSections();
-renderCards();
 initCartHoverEffects(cardList);
 
 document.querySelector(".copy-link").addEventListener("click", function (e) {
