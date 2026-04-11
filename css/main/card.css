@@ -28,19 +28,29 @@ section span {
   perspective: 1000px; /* Создает эффект объема/перспективы */
 }
 
+/* 1. Исправляем обертку */
 .sticky-wrapper {
   position: -webkit-sticky;
   position: sticky;
   top: 55px;
-  width: min-content; /* Чтобы обертка не занимала всю ширину */
-  align-self: flex-start; /* Если внутри flex-контейнера */
+  align-self: flex-start; /* Не дает растягиваться на всю высоту секции */
+  z-index: 10;
+  height: fit-content; /* КРИТИЧНО для мобильных */
 }
 
-section div h3 {
+/* 2. Убираем потенциальные помехи у section */
+section {
+  display: flex;
+  overflow: visible !important; /* На всякий случай */
+  position: relative; /* Создает точку отсчета для sticky */
+}
+
+/* 3. Фикс для h3 внутри обертки */
+.sticky-wrapper h3 {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  /* Остальные стили текста */
   margin: 0;
+  white-space: nowrap; /* Чтобы текст не переносился */
 }
 
 article h2 {
