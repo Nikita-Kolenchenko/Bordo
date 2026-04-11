@@ -180,6 +180,9 @@ article.card.is-flipped .card-inner {
     margin-left: 5px;
     top: 70px;
   }
+  .sticky-wrapper h3 {
+    font-size: 17px;
+  }
   section .menu-grid .card {
     height: 263px;
     width: 160px;
