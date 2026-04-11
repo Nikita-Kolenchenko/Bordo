@@ -48,7 +48,7 @@ dialog::backdrop {
 
 @media (max-width: 768px) {
   main {
-    margin-top: 35px;
+    margin-top: 50px;
   }
   article .card-inner .card-back h3 {
     top: 25px;
