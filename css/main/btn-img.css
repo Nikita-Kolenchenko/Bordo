@@ -113,14 +113,14 @@ img {
 @media (max-width: 768px) {
   .counter-controls {
     width: 150px;
-    padding: 5px 0px;
+    padding: 6px 0px;
     font-size: 12px;
     margin-top: 6px;
     margin-bottom: 5px;
   }
   .main-btn {
     width: 150px;
-    padding: 5px 8px;
+    padding: 6px 8px;
     font-size: 12px;
     margin-top: 6px;
     margin-bottom: 5px;
