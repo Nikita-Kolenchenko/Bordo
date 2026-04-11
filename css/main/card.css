@@ -28,23 +28,19 @@ section span {
   perspective: 1000px; /* Создает эффект объема/перспективы */
 }
 
-section h3 {
-  margin-left: 1%;
-  /* Главные свойства для поворота */
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-
-  /* Стилизация */
-  color: #f5f5f5;
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: auto;
-  margin-top: 1%;
+.sticky-wrapper {
+  position: -webkit-sticky;
   position: sticky;
   top: 55px;
-  user-select: none;
+  width: min-content; /* Чтобы обертка не занимала всю ширину */
+  align-self: flex-start; /* Если внутри flex-контейнера */
+}
+
+section div h3 {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  /* Остальные стили текста */
+  margin: 0;
 }
 
 article h2 {
@@ -174,7 +170,7 @@ article.card.is-flipped .card-inner {
     width: 160px;
     margin: 1.5vw;
   }
-  section h3 {
+  .sticky-wrapper {
     margin-right: 0;
   }
   article h2 {
