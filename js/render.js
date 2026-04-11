@@ -25,7 +25,7 @@ export function renderCards(data) {
         <article class="card" id="${item.name}">
             <div class="card-inner ${item.name}">
                 <div class="${item.class} card-front ${item.name}">
-                    <img src="${item.img}" alt="${item.name}">
+                    <img src="${item.img}" alt="${item.name}" loading="lazy">
                     <div class="card-content">
                         <h2>${item.price} $</h2>
                         <a>${item.name}</a>
