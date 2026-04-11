@@ -1,7 +1,6 @@
 /* ⚪ IMG ⚪ */
 
 img {
-  /* ⚪ IMG-CARD ⚪ */
   background-color: #121212;
   justify-content: center;
   align-items: center;
@@ -79,7 +78,6 @@ img {
   transition: all 0.1s;
 }
 
-/* Анимация сработает ТОЛЬКО на компьютерах */
 @media (hover: hover) {
   .main-btn:hover {
     background-color: #8b1a1a;
@@ -99,7 +97,6 @@ img {
   }
 }
 
-/* Стили для телефонов (нажатие) */
 @media (hover: none) {
   .main-btn:active {
     transform: scale(0.97);

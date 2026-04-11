@@ -9,7 +9,6 @@ export function updateEmptyState() {
 }
 
 export function initCartHoverEffects(cardListUl) {
-  // Проверяем: если устройство НЕ поддерживает ховер (телефон), выходим из функции
   if (!window.matchMedia("(hover: hover)").matches) {
     return;
   }

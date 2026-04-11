@@ -13,11 +13,11 @@
 
 .dialog-header h2 {
   color: #f5f5f5;
-  text-transform: uppercase; /* Все с большой */
+  text-transform: uppercase;
   font-family: "Geist", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 5px; /* Отступ между букв */
+  letter-spacing: 5px;
   font-size: 18px;
   display: flex;
   align-items: center;
@@ -73,7 +73,7 @@
   padding: 0;
   font-weight: 700;
   font-size: 12px;
-  letter-spacing: -0.5px; /* Немного сжимаем буквы для стиля */
+  letter-spacing: -0.5px;
   cursor: default;
   margin-left: auto;
 }
@@ -94,9 +94,9 @@
   flex-wrap: wrap;
   color: #f5f5f5;
   font-size: 13px;
-  white-space: nowrap; /* Запрещаем перенос строк */
-  overflow: hidden; /* Прячем то, что не влезло */
-  text-overflow: ellipsis; /* Добавляем три точки (...) */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-decoration: none;
   width: 40%;
   cursor: pointer;
@@ -118,7 +118,7 @@
   color: #f5f5f5;
   font-weight: bold;
   font-size: 20px;
-  text-transform: uppercase; /* Все с большой */
+  text-transform: uppercase;
 }
 
 .dialog-header button {
@@ -175,7 +175,6 @@ li button {
   transition: all 0.3s ease;
 }
 
-/* Анимация сработает ТОЛЬКО на компьютерах */
 @media (hover: hover) {
   .dialog-header button:hover {
     transform: rotate(70deg) scale(1.1);
@@ -202,7 +201,6 @@ li button {
   }
 }
 
-/* Стили для телефонов (нажатие) */
 @media (hover: none) {
   .dialog-header button:active {
     transform: rotate(100deg) scale(0.8);

@@ -33,7 +33,7 @@ dialog {
     visibility 0.3s;
 }
 
-/* ⚪ Когда диалог открыт (open) */
+/* ⚪ Когда диалог открыт */
 dialog[open] {
   transform: translateX(0);
   opacity: 1;

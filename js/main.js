@@ -31,7 +31,6 @@ function generateAllSections() {
     });
   });
 
-  // Запуск всей логики кнопок и корзины
   initEvents(cardList);
 }
 
@@ -42,9 +41,8 @@ initCartHoverEffects(cardList);
 document.querySelector(".copy-link").addEventListener("click", function (e) {
   e.preventDefault();
 
-  const text = this.innerText; // Сохранили адрес один раз и навсегда
+  const text = this.innerText;
 
-  // Если уже написано Copied!, ничего не делаем
   if (text === "Copied!") return;
 
   navigator.clipboard.writeText(text).then(() => {
@@ -53,7 +51,6 @@ document.querySelector(".copy-link").addEventListener("click", function (e) {
     this.classList.remove("cursor-1");
 
     setTimeout(() => {
-      // Возвращаем тот самый текст, который сохранили в первой строке
       this.innerText = text;
       this.classList.remove("cursor-2");
       this.classList.add("cursor-1");

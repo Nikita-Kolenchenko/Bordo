@@ -84,7 +84,6 @@ footer {
   margin: 10px;
 }
 
-/* И "пустышка", и правый текст получают одинаковую ширину */
 .spacer,
 .text-right {
   flex: 1;
@@ -97,12 +96,10 @@ footer {
 
 .text-center {
   color: #444444;
-  /* Текст в центре не растягивается, он просто стоит посередине */
   white-space: nowrap;
   transition: all 0.2s ease;
 }
 
-/* Анимация сработает ТОЛЬКО на компьютерах */
 @media (hover: hover) {
   .text-center:hover {
     color: #f5f5f5;
@@ -112,7 +109,6 @@ footer {
   }
 }
 
-/* Стили для телефонов (нажатие) */
 @media (hover: none) {
   .footer-middle a:hover {
     transform: scale(0.97);

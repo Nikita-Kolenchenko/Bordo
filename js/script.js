@@ -1,7 +1,7 @@
 import { menuStarters, menuMain, menuDesserts, menuDrinks } from "../menu.js";
 
 const mainElement = document.getElementById("menu-container");
-const cardList = document.querySelector(".card-list"); // Вынесем поиск корзины в константу
+const cardList = document.querySelector(".card-list");
 
 const menuConfig = [
   { id: "starters", title: "starters", data: menuStarters },
@@ -27,7 +27,6 @@ function generateAllSections() {
     )
     .join("");
 
-  // После генерации HTML инициализируем события
   initCards();
   initSteppers();
 }
@@ -85,16 +84,15 @@ function updateEmptyState() {
   const cardListUl = document.querySelector(".card-list");
   const emptyBlock = document.querySelector(".card-list-empty");
 
-  // Если в списке 0 элементов
   if (cardListUl.children.length === 0) {
-    emptyBlock.style.display = "flex"; // Показываем надпись
-    cardListUl.style.display = "none"; // Скрываем сам список
+    emptyBlock.style.display = "flex";
+    cardListUl.style.display = "none";
   } else {
-    emptyBlock.style.display = "none"; // Скрываем надпись
-    cardListUl.style.display = "block"; // Показываем список
+    emptyBlock.style.display = "none";
+    cardListUl.style.display = "block";
   }
 }
-// --- ЛОГИКА КАРТОЧЕК (FLIP) ---
+// --- ЛОГИКА КАРТОЧЕК ---
 function initCards() {
   const cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
@@ -104,12 +102,12 @@ function initCards() {
   });
 }
 
-// --- ЛОГИКА СТЕППЕРОВ (+/-) ---
+// --- ЛОГИКА СТЕППЕРОВ ---
 function initSteppers() {
   const containers = document.querySelectorAll(".stepper-container");
 
   containers.forEach((container) => {
-    container.addEventListener("click", (e) => e.stopPropagation()); // Чтобы карточка не переворачивалась при клике на кнопки
+    container.addEventListener("click", (e) => e.stopPropagation());
     const card = container.closest(".card");
     const addBtn = container.querySelector(".main-btn");
     const plusBtn = container.querySelector(".plus");
@@ -134,7 +132,6 @@ function initSteppers() {
       card.dataset.count = 1;
       updateUI(1, true);
 
-      // Используем insertAdjacentHTML, чтобы не "убивать" обработчики на других li
       cardList.insertAdjacentHTML(
         "beforeend",
         `
@@ -192,7 +189,7 @@ function initSteppers() {
   });
 }
 
-// --- УДАЛЕНИЕ ИЗ КОРЗИНЫ (Делегирование) ---
+// --- УДАЛЕНИЕ ИЗ КОРЗИНЫ ---
 cardList.addEventListener("click", (event) => {
   const btn = event.target.closest(".liBtn");
   if (!btn) return;
@@ -200,10 +197,8 @@ cardList.addEventListener("click", (event) => {
   const listItem = btn.closest("li");
   const itemName = listItem.dataset.cartItem;
 
-  // 1. Удаляем из корзины
   listItem.remove();
 
-  // 2. Сбрасываем карточку в меню
   const addBtnInMenu = document.querySelector(
     `.main-btn[data-name="${itemName}"]`,
   );
@@ -211,7 +206,6 @@ cardList.addEventListener("click", (event) => {
     const card = addBtnInMenu.closest(".card");
     card.dataset.count = 1;
 
-    // Вручную обновляем UI всех сторон карточки
     const allAddBtns = card.querySelectorAll(".main-btn");
     const allControls = card.querySelectorAll(".counter-controls");
     const allValueDisplays = card.querySelectorAll(".count-value");
@@ -225,10 +219,8 @@ cardList.addEventListener("click", (event) => {
   }
 });
 
-// Запуск приложения
 generateAllSections();
 
-// Эффекты наведения (Hover) на кнопки корзины
 const cardListUl = document.querySelector(".card-list");
 
 cardListUl.addEventListener("mouseover", (e) => {
@@ -238,13 +230,11 @@ cardListUl.addEventListener("mouseover", (e) => {
   const allLis = cardListUl.querySelectorAll("li");
   const parentLi = btn.closest("li");
 
-  // 1. Сначала "приглушаем" все элементы
   allLis.forEach((li) => {
     li.style.opacity = "0.5";
     li.style.border = "1px solid #333";
   });
 
-  // 2. Добавляем эффекты ТОЛЬКО для активного parentLi
   if (parentLi) {
     parentLi.style.opacity = "1";
     parentLi.style.transform = "scale(1.02), translateY(0px)";
@@ -253,7 +243,6 @@ cardListUl.addEventListener("mouseover", (e) => {
   }
 });
 
-// Возврат в исходное состояние
 cardListUl.addEventListener("mouseout", (e) => {
   if (e.target.closest(".liBtn")) {
     const allLis = cardListUl.querySelectorAll("li");

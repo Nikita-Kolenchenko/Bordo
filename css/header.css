@@ -20,7 +20,7 @@ header {
   font-family: "Geist", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 10px; /* Создает ощущение "премиум" бренда */
+  letter-spacing: 10px;
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -55,7 +55,7 @@ header button:active {
   margin: 0 3px;
   text-transform: uppercase;
   font-weight: 800;
-  font-family: "Inter", sans-serif; /* Похож на Lucide */
+  font-family: "Inter", sans-serif;
   letter-spacing: 0.1em;
   transition: all 0.2s ease;
 }
@@ -88,7 +88,6 @@ header button:active {
   transition: all 0.2s ease;
 }
 
-/* Анимация сработает ТОЛЬКО на компьютерах */
 @media (hover: hover) {
   .logo:hover {
     color: #5e19149f;
@@ -107,7 +106,6 @@ header button:active {
   }
 }
 
-/* Стили для телефонов (нажатие) */
 @media (hover: none) {
   .logo:active {
     transform: scale(0.97);

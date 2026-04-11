@@ -1,7 +1,6 @@
 import { updateEmptyState } from "./render.js";
 
 export function initEvents(cardList) {
-  // Логика степперов и добавления
   document.querySelectorAll(".stepper-container").forEach((container) => {
     container.addEventListener("click", (e) => e.stopPropagation());
     const card = container.closest(".card");
@@ -71,7 +70,6 @@ export function initEvents(cardList) {
     });
   });
 
-  // Удаление и ховеры (делегирование на cardList)
   cardList.addEventListener("click", (e) => {
     const btn = e.target.closest(".liBtn");
     if (!btn) return;

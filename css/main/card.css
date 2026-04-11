@@ -25,32 +25,33 @@ section span {
   padding: 0;
   margin-left: 0;
   transition: all 0.3s ease;
-  perspective: 1000px; /* Создает эффект объема/перспективы */
+  perspective: 1000px;
 }
 
-/* 1. Исправляем обертку */
 .sticky-wrapper {
   position: -webkit-sticky;
   position: sticky;
   top: 55px;
-  align-self: flex-start; /* Не дает растягиваться на всю высоту секции */
-  height: fit-content; /* КРИТИЧНО для мобильных */
+  align-self: flex-start;
+  height: fit-content;
   align-items: center;
 }
 
-/* 2. Убираем потенциальные помехи у section */
 section {
   display: flex;
-  overflow: visible !important; /* На всякий случай */
-  position: relative; /* Создает точку отсчета для sticky */
+  overflow: visible !important;
+  position: relative;
 }
 
-/* 3. Фикс для h3 внутри обертки */
 .sticky-wrapper h3 {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   margin: 0;
-  white-space: nowrap; /* Чтобы текст не переносился */
+  color: #f5f5f5;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 article h2 {
@@ -61,7 +62,7 @@ article h2 {
   padding: 0;
   font-weight: 700;
   font-size: 15px;
-  letter-spacing: -0.5px; /* Немного сжимаем буквы для стиля */
+  letter-spacing: -0.5px;
 }
 
 article a {
@@ -85,26 +86,24 @@ article div p {
   color: #c5c5c5;
   font-size: 12px;
   font-weight: 400;
-  letter-spacing: -0.5px; /* Немного сжимаем буквы для стиля */
+  letter-spacing: -0.5px;
   overflow: hidden;
   max-width: 130px;
 }
 article div {
   display: grid;
-  grid-template-rows: auto 1fr auto; /* Верх, середина (растянется), низ */
+  grid-template-rows: auto 1fr auto;
   transition: all 0.3s ease;
 }
 
-/* Самый верхний контейнер */
 span article.card {
-  background-color: transparent; /* Убираем фон, он будет у сторон */
+  background-color: transparent;
   border: none;
   margin: 15px;
-  perspective: 1000px; /* Важно для 3D */
+  perspective: 1000px;
   cursor: pointer;
 }
 
-/* Контейнер, который крутится */
 .card-inner {
   position: relative;
   width: 100%;
@@ -118,22 +117,20 @@ span article.card {
     box-shadow 0.3s ease;
 }
 
-/* Состояние переворота */
 article.card.is-flipped .card-inner {
   transform: rotateY(180deg);
 }
 
 .is-animating {
-  pointer-events: none; /* Отключает все взаимодействия: ховер, клики, актив */
+  pointer-events: none;
 }
 
-/* Общие стили для сторон */
 .card-front,
 .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden; /* Скрывает заднюю часть при повороте */
+  backface-visibility: hidden;
   border-radius: 15px;
   overflow: hidden;
   display: flex;
@@ -145,32 +142,30 @@ article.card.is-flipped .card-inner {
   background-color: #1e1e1e;
   border: 1px solid #333;
   transition: all 0.3s ease;
-  perspective: 1000px; /* Создает эффект объема/перспективы */
+  perspective: 1000px;
 }
 
 .card-back {
   color: #f5f5f5;
-  transform: rotateY(180deg); /* Повернута по умолчанию */
+  transform: rotateY(180deg);
   justify-content: center;
   align-items: center;
   background-color: #1e1e1e;
   border: 1px solid #333;
-  perspective: 1000px; /* Создает эффект объема/перспективы */
+  perspective: 1000px;
 }
 
-/* Анимация сработает ТОЛЬКО на компьютерах */
 @media (hover: hover) {
   .card-front:hover {
-    transform: translateY(-5px) rotateY(0); /* Карточка плавно приподнимается */
+    transform: translateY(-5px) rotateY(0);
     box-shadow: 0 10px 20px rgba(109, 0, 0, 0.4);
   }
   .card-back:hover {
-    transform: translateY(-5px) rotateY(180deg); /* Карточка плавно приподнимается */
+    transform: translateY(-5px) rotateY(180deg);
     box-shadow: 0 10px 20px rgba(109, 0, 0, 0.4);
   }
 }
 
-/* Стили для телефонов (нажатие) */
 @media (hover: none) {
 }
 
