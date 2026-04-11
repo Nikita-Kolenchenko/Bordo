@@ -34,8 +34,8 @@ section span {
   position: sticky;
   top: 55px;
   align-self: flex-start; /* Не дает растягиваться на всю высоту секции */
-  z-index: 10;
   height: fit-content; /* КРИТИЧНО для мобильных */
+  align-items: center;
 }
 
 /* 2. Убираем потенциальные помехи у section */
@@ -179,9 +179,6 @@ article.card.is-flipped .card-inner {
     height: 263px;
     width: 160px;
     margin: 1.5vw;
-  }
-  .sticky-wrapper {
-    margin-right: 0;
   }
   article h2 {
     margin: 4px 6px;
