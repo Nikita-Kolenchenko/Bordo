@@ -16,7 +16,9 @@ function generateAllSections() {
     .map(
       (section) => `
         <section id="${section.id}">
-            <h3>${section.title}</h3>
+            <div class="sticky-wrapper">
+              <h3>${section.title}</h3>
+            </div>
             <span id="${section.id}1" class="menu-grid">
                 ${renderCards(section.data)}
             </span>
