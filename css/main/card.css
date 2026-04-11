@@ -35,7 +35,7 @@ section span {
   align-self: flex-start;
   height: fit-content;
   min-width: 17px;
-  margin-left: 5px;
+  margin-left: 15px;
 }
 
 section {
@@ -149,11 +149,18 @@ article.card.is-flipped .card-inner {
 .card-back {
   color: #f5f5f5;
   transform: rotateY(180deg);
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   background-color: #1e1e1e;
   border: 1px solid #333;
   perspective: 1000px;
+  padding-bottom: 2px;
+}
+
+.card-back h3 {
+  writing-mode: vertical-rl; /* Текст станет вертикальным сверху вниз */
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 @media (hover: hover) {
@@ -167,10 +174,10 @@ article.card.is-flipped .card-inner {
   }
 }
 
-@media (hover: none) {
-}
-
 @media (max-width: 768px) {
+  .sticky-wrapper {
+    margin-left: 5px;
+  }
   section .menu-grid .card {
     height: 263px;
     width: 160px;
