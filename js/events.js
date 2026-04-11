@@ -23,6 +23,9 @@ export function initEvents(cardList) {
     };
 
     addBtn.addEventListener("click", () => {
+      const basketBtn = document.querySelector(".svgBtn");
+      basketBtn.classList.add("plus-on-basket");
+      setTimeout(() => basketBtn.classList.remove("plus-on-basket"), 500);
       const { name, price, img } = addBtn.dataset;
       card.dataset.count = 1;
       updateUI(1, true);
@@ -39,6 +42,9 @@ export function initEvents(cardList) {
     });
 
     container.querySelector(".plus").addEventListener("click", () => {
+      const basketBtn = document.querySelector(".svgBtn");
+      basketBtn.classList.add("plus-on-basket");
+      setTimeout(() => basketBtn.classList.remove("plus-on-basket"), 500);
       let count = (parseInt(card.dataset.count) || 1) + 1;
       if (count <= 10) {
         card.dataset.count = count;
@@ -51,6 +57,9 @@ export function initEvents(cardList) {
     });
 
     container.querySelector(".minus").addEventListener("click", () => {
+      const basketBtn = document.querySelector(".svgBtn");
+      basketBtn.classList.add("plus-on-basket");
+      setTimeout(() => basketBtn.classList.remove("plus-on-basket"), 500);
       let count = (parseInt(card.dataset.count) || 1) - 1;
       if (count >= 1) {
         card.dataset.count = count;

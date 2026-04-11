@@ -128,9 +128,14 @@ function initSteppers() {
     };
 
     addBtn.addEventListener("click", () => {
+      const basketBtn = document.querySelector("header nav button svg");
+      console.log(basketBtn);
       const { name, price, img } = addBtn.dataset;
       card.dataset.count = 1;
       updateUI(1, true);
+
+      basketBtn.classList.add("plus-on-basket");
+      setTimeout(() => basketBtn.classList.remove("plus-on-basket"), 500);
 
       cardList.insertAdjacentHTML(
         "beforeend",

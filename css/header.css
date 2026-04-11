@@ -41,12 +41,6 @@ header button {
   cursor: pointer;
   transition: all 0.1s ease;
 }
-header button:hover {
-  transform: scale(1.1);
-}
-header button:active {
-  transform: scale(0.8);
-}
 
 header button svg {
   width: 21px;
@@ -109,6 +103,12 @@ header button svg {
   .menu-2 a:hover {
     color: #aaaaaa;
   }
+  header button:hover {
+    transform: scale(1.1);
+  }
+  header button:active {
+    transform: scale(0.8);
+  }
 }
 
 @media (hover: none) {
@@ -120,6 +120,9 @@ header button svg {
   }
   .menu-2 a:active {
     transform: scale(0.9);
+  }
+  header button:active {
+    transform: scale(0.8);
   }
 }
 
@@ -204,5 +207,23 @@ header button svg {
   }
   .header-hidden {
     transform: translateY(-100%); /* выталкивает панель вверх за экран */
+  }
+}
+
+.plus-on-basket {
+  animation: plus-basket 0.5s;
+}
+
+@keyframes plus-basket {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(0.95);
+    opacity: 0.6;
   }
 }
