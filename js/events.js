@@ -1,4 +1,4 @@
-import { updateEmptyState } from "./render.js";
+import { updateEmptyState } from "./cart.js";
 
 export function initEvents(cardList) {
   document.querySelectorAll(".stepper-container").forEach((container) => {

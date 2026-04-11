@@ -1,3 +1,24 @@
+import { menuConfig } from "./menu-config.js";
+
+const mainElement = document.getElementById("menu-container");
+
+function generateAllSections() {
+  mainElement.innerHTML = menuConfig
+    .map(
+      (section) => `
+        <section id="${section.id}">
+          <div class="sticky-wrapper">
+            <h3>${section.title}</h3>
+          </div>
+            <span id="${section.id}1" class="menu-grid">${renderCards(section.data)}</span>
+        </section>
+    `,
+    )
+    .join("");
+}
+
+generateAllSections();
+
 export function renderCards(data) {
   const btnTemplate = (item) => `
         <div class="stepper-container">
@@ -45,17 +66,4 @@ export function renderCards(data) {
     `,
     )
     .join("");
-}
-
-export function updateEmptyState() {
-  const cardListUl = document.querySelector(".card-list");
-  const emptyBlock = document.querySelector(".card-list-empty");
-
-  if (cardListUl.children.length === 0) {
-    emptyBlock.style.display = "flex";
-    cardListUl.style.display = "none";
-  } else {
-    emptyBlock.style.display = "none";
-    cardListUl.style.display = "block";
-  }
 }

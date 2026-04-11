@@ -1,11 +1,14 @@
 export function updateEmptyState() {
   const cardListUl = document.querySelector(".card-list");
   const emptyBlock = document.querySelector(".card-list-empty");
-  if (!cardListUl || !emptyBlock) return;
 
-  const isEmpty = cardListUl.children.length === 0;
-  emptyBlock.style.display = isEmpty ? "flex" : "none";
-  cardListUl.style.display = isEmpty ? "none" : "block";
+  if (cardListUl.children.length === 0) {
+    emptyBlock.style.display = "flex";
+    cardListUl.style.display = "none";
+  } else {
+    emptyBlock.style.display = "none";
+    cardListUl.style.display = "block";
+  }
 }
 
 export function initCartHoverEffects(cardListUl) {

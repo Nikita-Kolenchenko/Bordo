@@ -1,41 +1,24 @@
-import { menuConfig } from "./menu-config.js";
-import { renderCards } from "./render.js";
 import { initEvents } from "./events.js";
 import { initCartHoverEffects } from "./cart.js";
 
-const mainElement = document.getElementById("menu-container");
 const cardList = document.querySelector(".card-list");
 
-function generateAllSections() {
-  mainElement.innerHTML = menuConfig
-    .map(
-      (section) => `
-        <section id="${section.id}">
-          <div class="sticky-wrapper">
-            <h3>${section.title}</h3>
-          </div>
-            <span id="${section.id}1" class="menu-grid">${renderCards(section.data)}</span>
-        </section>
-    `,
-    )
-    .join("");
-
-  // Инициализация клика (Flip)
-  document.querySelectorAll(".card").forEach((card) => {
-    card.addEventListener("click", () => {
-      card.classList.add("is-animating");
-      card.classList.toggle("is-flipped");
-      setTimeout(() => {
-        card.classList.remove("is-animating");
-      }, 400);
-    });
+// Инициализация клика (Flip)
+document.querySelectorAll(".card").forEach((card) => {
+  card.addEventListener("click", () => {
+    card.classList.add("is-animating");
+    card.classList.toggle("is-flipped");
+    setTimeout(() => {
+      card.classList.remove("is-animating");
+    }, 400);
   });
+});
 
-  initEvents(cardList);
-}
+initEvents(cardList);
 
 // Запуск приложения
 generateAllSections();
+renderCards();
 initCartHoverEffects(cardList);
 
 document.querySelector(".copy-link").addEventListener("click", function (e) {
