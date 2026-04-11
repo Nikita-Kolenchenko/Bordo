@@ -34,8 +34,8 @@ section span {
   top: 55px;
   align-self: flex-start;
   height: fit-content;
-  align-items: center;
-  min-width: 18px;
+  min-width: 17px;
+  margin-left: 5px;
 }
 
 section {
