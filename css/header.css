@@ -136,6 +136,8 @@ header button:active {
     margin: 0;
     width: 98vw;
     margin: 0 1vw;
+    padding: 5px 10px;
+    padding-right: 10px;
     overflow-x: auto;
     &::-webkit-scrollbar {
       display: none;

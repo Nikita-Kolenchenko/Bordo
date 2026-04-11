@@ -36,6 +36,7 @@ section span {
   height: fit-content;
   min-width: 17px;
   margin-left: 15px;
+  transition: all 0.5s ease;
 }
 
 section {
@@ -177,6 +178,7 @@ article.card.is-flipped .card-inner {
 @media (max-width: 768px) {
   .sticky-wrapper {
     margin-left: 5px;
+    top: 70px;
   }
   section .menu-grid .card {
     height: 263px;

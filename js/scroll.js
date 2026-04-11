@@ -8,10 +8,16 @@ let lastScroll = 0;
 const header = document.querySelector("header"); // или твой класс навигации
 
 window.addEventListener("scroll", () => {
+  if (window.innerWidth > 768) return;
+
+  const stickyWrapper = document.querySelectorAll(".sticky-wrapper");
   const currentScroll = window.pageYOffset;
 
-  if (currentScroll <= 0) {
+  if (currentScroll <= 100) {
     header.classList.remove("header-hidden");
+    stickyWrapper.forEach((el) => {
+      el.style.top = "70px";
+    });
     return;
   }
 
@@ -21,14 +27,19 @@ window.addEventListener("scroll", () => {
   ) {
     // Скроллим вниз — прячем
     header.classList.add("header-hidden");
+    stickyWrapper.forEach((el) => {
+      el.style.top = "5px";
+    });
   } else if (
     currentScroll < lastScroll &&
     header.classList.contains("header-hidden")
   ) {
     // Скроллим вверх — показываем
     header.classList.remove("header-hidden");
+    stickyWrapper.forEach((el) => {
+      el.style.top = "70px";
+    });
   }
-
   lastScroll = currentScroll;
 });
 
