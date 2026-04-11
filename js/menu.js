@@ -1,7 +1,7 @@
 // 🟡 - Starters - 🟡
 const menuStarters = [
   {
-    img: "./images/starters/hot/Bacon-Wrapped-Zucchini.jpg",
+    img: "./images/starters/hot/Bacon-Wrapped-Zucchini.webp",
     name: "Bacon-Wrapped Zucchini",
     compound:
       "Tender zucchini spears wrapped in crispy smoked bacon, roasted with garlic butter and provence herbs.",
@@ -14,7 +14,7 @@ const menuStarters = [
     rating: 4.7,
   },
   {
-    img: "./images/starters/hot/Exotic-Meat-Selection.jpg",
+    img: "./images/starters/hot/Exotic-Meat-Selection.webp",
     name: "Exotic Meat Selection",
     compound:
       "A curated platter of premium deli meats, served with a signature berry reduction and toasted artisanal bread.",
@@ -27,7 +27,7 @@ const menuStarters = [
     rating: 4.9,
   },
   {
-    img: "./images/starters/cold/Garden-Fresh-Meat-Salad.jpg",
+    img: "./images/starters/cold/Garden-Fresh-Meat-Salad.webp",
     name: "Fresh Meat Salad",
     compound:
       "Fresh garden greens mixed with tender boiled beef slices, juicy tomatoes, and cucumbers with an olive oil dressing.",
@@ -40,7 +40,7 @@ const menuStarters = [
     rating: 4.5,
   },
   {
-    img: "./images/starters/vegetarian/Golden-Pickled-Cucumbers.jpg",
+    img: "./images/starters/vegetarian/Golden-Pickled-Cucumbers.webp",
     name: "Golden Cucumber",
     compound:
       "House-made pickles infused with turmeric, mustard seeds, and a spicy aromatic marinade for a signature golden hue.",
@@ -53,7 +53,7 @@ const menuStarters = [
     rating: 4.3,
   },
   {
-    img: "./images/starters/vegetarian/Vegetable-salat.jpg",
+    img: "./images/starters/vegetarian/Vegetable-salat.webp",
     name: "Salat",
     compound:
       "A classic blend of seasonal vegetables: ripe tomatoes, bell peppers, red onions, and farm-fresh herbs.",
@@ -70,7 +70,7 @@ const menuStarters = [
 // 🟡 - Mains - 🟡
 const menuMain = [
   {
-    img: "./images/mains/meat/Chicken-and-Carrot-Curry.jpg",
+    img: "./images/mains/meat/Chicken-and-Carrot-Curry.webp",
     name: "Chicken and Curry",
     compound:
       "Tender chicken breast simmered in a rich coconut curry sauce with sweet glazed carrots and aromatic spices.",
@@ -83,7 +83,7 @@ const menuMain = [
     rating: 4.8,
   },
   {
-    img: "./images/mains/meat/Hot-Chili-Meat.jpg",
+    img: "./images/mains/meat/Hot-Chili-Meat.webp",
     name: "Hot Chili Meat",
     compound:
       "Slow-cooked beef chunks in a fiery chili sauce with bell peppers, onions, and a hint of smoked paprika.",
@@ -96,7 +96,7 @@ const menuMain = [
     rating: 4.9,
   },
   {
-    img: "./images/mains/meat/Pepper-Harmony-Chicken.jpg",
+    img: "./images/mains/meat/Pepper-Harmony-Chicken.webp",
     name: "Pepper Chicken",
     compound:
       "Juicy chicken thighs sautéed with a colorful harmony of bell peppers and a cracked black pepper glaze.",
@@ -109,7 +109,7 @@ const menuMain = [
     rating: 4.6,
   },
   {
-    img: "./images/mains/meat/Spicy-Herb-Meat.jpg",
+    img: "./images/mains/meat/Spicy-Herb-Meat.webp",
     name: "Spicy Herb Meat",
     compound:
       "Grilled medallions of pork seasoned with a vibrant blend of fresh garden herbs and crushed red pepper.",
@@ -122,7 +122,7 @@ const menuMain = [
     rating: 4.7,
   },
   {
-    img: "./images/mains/pizza/Cheesy-Meat-Pizza.jpg",
+    img: "./images/mains/pizza/Cheesy-Meat-Pizza.webp",
     name: "Cheesy Meat Pizza",
     compound:
       "Thin crust topped with premium mozzarella, pepperoni, Italian sausage, and savory ham on a tomato base.",
@@ -135,7 +135,7 @@ const menuMain = [
     rating: 4.8,
   },
   {
-    img: "./images/mains/pizza/Golden-Pepper-Pizza.jpg",
+    img: "./images/mains/pizza/Golden-Pepper-Pizza.webp",
     name: "Golden Pepper Pizza",
     compound:
       "A vegetarian delight featuring golden bell peppers, sun-dried tomatoes, and extra virgin olive oil.",
@@ -148,7 +148,7 @@ const menuMain = [
     rating: 4.4,
   },
   {
-    img: "./images/mains/pizza/Hawaiian-Meat-Pizza.jpg",
+    img: "./images/mains/pizza/Hawaiian-Meat-Pizza.webp",
     name: "Hawaiian Meat Pizza",
     compound:
       "The classic tropical mix: juicy pineapple chunks, honey-glazed ham, and melted mozzarella cheese.",
@@ -161,7 +161,7 @@ const menuMain = [
     rating: 4.2,
   },
   {
-    img: "./images/mains/soup/Beetroot-Cream-Soup.jpg",
+    img: "./images/mains/soup/Beetroot-Cream-Soup.webp",
     name: "Beetroot Cream Soup",
     compound:
       "Velvety smooth beetroot purée with a touch of ginger, served with a dollop of sour cream and pumpkin seeds.",
@@ -174,7 +174,7 @@ const menuMain = [
     rating: 4.7,
   },
   {
-    img: "./images/mains/soup/Creamy-Grain-Bowl.jpg",
+    img: "./images/mains/soup/Creamy-Grain-Bowl.webp",
     name: "Creamy Grain Bowl",
     compound:
       "A hearty and nutritious soup with pearled barley, wild mushrooms, and a delicate cream finish.",
@@ -191,7 +191,7 @@ const menuMain = [
 // 🟡 - Desserts - 🟡
 const menuDesserts = [
   {
-    img: "./images/desserts/cake/cherry-cake.jpg",
+    img: "./images/desserts/cake/cherry-cake.webp",
     name: "Cherry Cake",
     compound:
       "Layered sponge cake with fresh cherries, light cream cheese frosting, and a hint of vanilla.",
@@ -204,7 +204,7 @@ const menuDesserts = [
     rating: 4.9,
   },
   {
-    img: "./images/desserts/cake/chocolate-cupcake.jpg",
+    img: "./images/desserts/cake/chocolate-cupcake.webp",
     name: "Chocolate Cupcake",
     compound:
       "Rich Belgian chocolate muffin with a molten center, topped with smooth ganache and chocolate chips.",
@@ -217,7 +217,7 @@ const menuDesserts = [
     rating: 4.8,
   },
   {
-    img: "./images/desserts/pie/pie.jpg",
+    img: "./images/desserts/pie/pie.webp",
     name: "Classic Fruit Pie",
     compound:
       "Traditional buttery crust filled with seasonal fruits and dusted with powdered sugar.",
@@ -234,7 +234,7 @@ const menuDesserts = [
 // 🟡 - Drinks - 🟡
 const menuDrinks = [
   {
-    img: "./images/drinks/cold/coca-cola.jpg",
+    img: "./images/drinks/cold/coca-cola.webp",
     name: "Coca Cola",
     compound:
       "Classic sparkling soft drink, served chilled with a slice of lemon and ice.",
@@ -247,7 +247,7 @@ const menuDrinks = [
     rating: 4.9,
   },
   {
-    img: "./images/drinks/cocktails/cherry-fresh.jpg",
+    img: "./images/drinks/cocktails/cherry-fresh.webp",
     name: "Cherry Fresh",
     compound:
       "Natural cold-pressed cherry juice with a splash of sparkling water and mint leaves.",
@@ -260,7 +260,7 @@ const menuDrinks = [
     rating: 4.7,
   },
   {
-    img: "./images/drinks/cocktails/lemonade.jpg",
+    img: "./images/drinks/cocktails/lemonade.webp",
     name: "Homemade Lemonade",
     compound:
       "Refreshing citrus blend of fresh lemons, limes, and a touch of organic agave syrup.",
@@ -273,7 +273,7 @@ const menuDrinks = [
     rating: 4.8,
   },
   {
-    img: "./images/drinks/cocktails/mojito.jpg",
+    img: "./images/drinks/cocktails/mojito.webp",
     name: "Classic Mojito",
     compound:
       "Muddled fresh mint and lime, cane sugar, and soda water. A perfect thirst quencher.",
@@ -286,7 +286,7 @@ const menuDrinks = [
     rating: 4.9,
   },
   {
-    img: "./images/drinks/beer/cinnamon-shot.jpg",
+    img: "./images/drinks/beer/cinnamon-shot.webp",
     name: "Cinnamon Shot",
     compound:
       "A spicy warming shot infused with natural cinnamon and a touch of honey.",
@@ -299,7 +299,7 @@ const menuDrinks = [
     rating: 4.4,
   },
   {
-    img: "./images/drinks/beer/lime-shot.jpg",
+    img: "./images/drinks/beer/lime-shot.webp",
     name: "Lime Shot",
     compound:
       "A sharp and refreshing citrus shot made with premium lime zest and agave.",
@@ -312,7 +312,7 @@ const menuDrinks = [
     rating: 4.5,
   },
   {
-    img: "./images/drinks/beer/shot.jpg",
+    img: "./images/drinks/beer/shot.webp",
     name: "Classic Shot",
     compound: "Our house-special premium spirit shot, served ice cold.",
     class: "drinksBeer",
@@ -324,7 +324,7 @@ const menuDrinks = [
     rating: 4.2,
   },
   {
-    img: "./images/drinks/beer/whiskey.jpg",
+    img: "./images/drinks/beer/whiskey.webp",
     name: "Aged Whiskey",
     compound:
       "Select single malt whiskey with smoky notes and a long, smooth finish. Served neat or on the rocks.",
