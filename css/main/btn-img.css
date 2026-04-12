@@ -10,6 +10,8 @@ img {
   width: 180px;
   height: 180px;
   margin: 10px;
+  aspect-ratio: 16 / 9; /* Укажите нужное соотношение */
+  object-fit: cover; /* Чтобы картинка не сплющилась */
 }
 
 /* ⚪ BTN ⚪ */
