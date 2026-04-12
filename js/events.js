@@ -1,7 +1,9 @@
 import { updateEmptyState } from "./cart.js";
 
+// ⚪ РАБОТА СТЕППЕРОВ ⚪
 export function initEvents(cardList) {
   document.querySelectorAll(".stepper-container").forEach((container) => {
+    // ⚪ блокирует передачу события родительским элементам
     container.addEventListener("click", (e) => e.stopPropagation());
     const card = container.closest(".card");
     const addBtn = container.querySelector(".main-btn");
@@ -22,6 +24,7 @@ export function initEvents(cardList) {
         );
     };
 
+    // ⚪ блокирует передачу события родительским элементам
     addBtn.addEventListener("click", () => {
       const basketBtn = document.querySelector(".svgBtn");
       basketBtn.classList.add("plus-on-basket");
@@ -41,6 +44,7 @@ export function initEvents(cardList) {
       updateEmptyState();
     });
 
+    // ⚪ обработка события кнопки плюс
     container.querySelector(".plus").addEventListener("click", () => {
       const basketBtn = document.querySelector(".svgBtn");
       basketBtn.classList.add("plus-on-basket");
@@ -54,8 +58,10 @@ export function initEvents(cardList) {
         );
         if (item) item.textContent = count;
       }
+      updateEmptyState();
     });
 
+    // ⚪ обработка события кнопки минус
     container.querySelector(".minus").addEventListener("click", () => {
       const basketBtn = document.querySelector(".svgBtn");
       basketBtn.classList.add("plus-on-basket");
@@ -79,6 +85,7 @@ export function initEvents(cardList) {
     });
   });
 
+  // ⚪ удаление из корзины
   cardList.addEventListener("click", (e) => {
     const btn = e.target.closest(".liBtn");
     if (!btn) return;

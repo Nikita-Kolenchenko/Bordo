@@ -1,44 +1,10 @@
 import { initEvents } from "./events.js";
 import { initCartHoverEffects } from "./cart.js";
+import { Copy } from "./footer.js";
 
-const cardList = document.querySelector(".card-list");
+const cardList = document.querySelector(".card-list"); // li
 
-// Инициализация клика (Flip)
-document.querySelectorAll(".card").forEach((card) => {
-  card.addEventListener("click", () => {
-    card.classList.add("is-animating");
-    card.classList.toggle("is-flipped");
-    setTimeout(() => {
-      card.classList.remove("is-animating");
-    }, 400);
-  });
-});
-
-initEvents(cardList);
-
-// Запуск приложения
-initCartHoverEffects(cardList);
-
-document.querySelector(".copy-link").addEventListener("click", function (e) {
-  e.preventDefault();
-
-  const text = this.innerText;
-
-  if (text === "Copied!") return;
-
-  navigator.clipboard.writeText(text).then(() => {
-    this.innerText = "Copied!";
-    this.classList.add("cursor-2");
-    this.classList.remove("cursor-1");
-
-    setTimeout(() => {
-      this.innerText = text;
-      this.classList.remove("cursor-2");
-      this.classList.add("cursor-1");
-    }, 1500);
-  });
-});
-
+// ⚪ ПОИСК ЕЛЕМЕНТА ИЗ КАРЗИНЫ ПО НАЖАТИЮ ⚪
 window.playCardAnimation = function (nameId) {
   const targetCard = document.getElementById(nameId);
   if (targetCard) {
@@ -51,3 +17,8 @@ window.playCardAnimation = function (nameId) {
     });
   }
 };
+
+// ⚪ ЗАПУСК ПРИЛОЖЕНИЯ ⚪
+initCartHoverEffects(cardList);
+initEvents(cardList);
+Copy();

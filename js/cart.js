@@ -1,3 +1,15 @@
+// ⚪ ПЕРЕВОРОТ КАРТОЧКИ ⚪
+document.querySelectorAll(".card").forEach((card) => {
+  card.addEventListener("click", () => {
+    card.classList.add("is-animating");
+    card.classList.toggle("is-flipped");
+    setTimeout(() => {
+      card.classList.remove("is-animating");
+    }, 400);
+  });
+});
+
+// ⚪ ЕСЛИ В КОРЗИНЕ ПУСТО НО ДОБАВЛЯЕМ НАДПИСЬ И КНОПКУ ⚪
 export function updateEmptyState() {
   const cardListUl = document.querySelector(".card-list");
   const emptyBlock = document.querySelector(".card-list-empty");
@@ -11,6 +23,7 @@ export function updateEmptyState() {
   }
 }
 
+// ⚪ СТИЛИ ПРИ НАВЕДЕНИИ НА КНОПКУ УДАЛЕНИЯ В КОРЗИНЕ ⚪
 export function initCartHoverEffects(cardListUl) {
   if (!window.matchMedia("(hover: hover)").matches) {
     return;

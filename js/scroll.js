@@ -1,47 +1,7 @@
-const extendedMenu = document.getElementById("extendedMenu");
+// ⚪ НАЦИГАЦИЯ ⚪
 const sections = document.querySelectorAll("main section");
-const ss = document.querySelectorAll("section span");
 const navLinks = document.querySelectorAll(".menu-2 a");
 const subMenus = document.querySelectorAll("#extendedMenu span");
-
-let lastScroll = 0;
-const header = document.querySelector("header"); // или твой класс навигации
-
-window.addEventListener("scroll", () => {
-  if (window.innerWidth > 768) return;
-
-  const stickyWrapper = document.querySelectorAll(".sticky-wrapper");
-  const currentScroll = window.pageYOffset;
-
-  if (currentScroll <= 100) {
-    header.classList.remove("header-hidden");
-    stickyWrapper.forEach((el) => {
-      el.style.top = "70px";
-    });
-    return;
-  }
-
-  if (
-    currentScroll > lastScroll &&
-    !header.classList.contains("header-hidden")
-  ) {
-    // Скроллим вниз — прячем
-    header.classList.add("header-hidden");
-    stickyWrapper.forEach((el) => {
-      el.style.top = "5px";
-    });
-  } else if (
-    currentScroll < lastScroll &&
-    header.classList.contains("header-hidden")
-  ) {
-    // Скроллим вверх — показываем
-    header.classList.remove("header-hidden");
-    stickyWrapper.forEach((el) => {
-      el.style.top = "70px";
-    });
-  }
-  lastScroll = currentScroll;
-});
 
 window.addEventListener("scroll", () => {
   let current = "";
@@ -89,4 +49,42 @@ menuLinks.forEach((linking) => {
       }, 1500);
     });
   });
+});
+
+// ⚪ ИСЧЕЗНОВЕНИЕ ПАНЕЛИ ПРИ СКРОЛЕ НА ТЕЛЕФОНЕ ⚪
+let lastScroll = 0;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  if (window.innerWidth > 768) return;
+
+  const stickyWrapper = document.querySelectorAll(".sticky-wrapper");
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll <= 100) {
+    header.classList.remove("header-hidden");
+    stickyWrapper.forEach((el) => {
+      el.style.top = "70px";
+    });
+    return;
+  }
+
+  if (
+    currentScroll > lastScroll &&
+    !header.classList.contains("header-hidden")
+  ) {
+    header.classList.add("header-hidden");
+    stickyWrapper.forEach((el) => {
+      el.style.top = "5px";
+    });
+  } else if (
+    currentScroll < lastScroll &&
+    header.classList.contains("header-hidden")
+  ) {
+    header.classList.remove("header-hidden");
+    stickyWrapper.forEach((el) => {
+      el.style.top = "70px";
+    });
+  }
+  lastScroll = currentScroll;
 });
