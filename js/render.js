@@ -48,7 +48,7 @@ export function renderCards(data) {
                 <div class="${item.class} card-front ${item.name}">
                     <img src="${item.img}" alt="${item.name}" width="100%" height="100%" loading="lazy">
                     <div class="card-content">
-                        <h2>${item.price} $</h2>
+                        <h2 class="price">${item.price} $</h2>
                         <a>${item.name}</a>
                         <p>${item.gram || item.ml || ""} ${item.gram ? "g" : "ml"}</p>
                         ${btnTemplate(item)}
