@@ -153,10 +153,13 @@ footer {
     color: #f5f5f5;
     font-size: 20px;
   }
+  .footer-middle {
+    width: 230px;
+  }
   .footer-middle a {
     color: #f5f5f5;
-    font-weight: 300;
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 11px;
     margin: 3px;
   }
   .footer-top p {
