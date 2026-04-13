@@ -28,6 +28,7 @@ export function initCopy() {
 
 export function copyright() {
   const copyrightBtn = document.querySelector(".text-right");
+  if (window.innerWidth > 768) return;
   if (!copyrightBtn) return;
 
   copyrightBtn.addEventListener("click", () => {
