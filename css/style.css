@@ -1,4 +1,5 @@
-@import "./header.css";
+@import "./media-header.css";
+@import "./media-header-mobile.css";
 @import "./footer.css";
 
 html,

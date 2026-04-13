@@ -1,6 +1,6 @@
 import { initEvents } from "./events.js";
 import { initCartHoverEffects } from "./cart.js";
-import { Copy } from "./footer.js";
+import { initCopy, copyright } from "./footer.js";
 
 const cardList = document.querySelector(".card-list"); // li
 
@@ -21,4 +21,5 @@ window.playCardAnimation = function (nameId) {
 // ⚪ ЗАПУСК ПРИЛОЖЕНИЯ ⚪
 initCartHoverEffects(cardList);
 initEvents(cardList);
-Copy();
+initCopy();
+copyright();

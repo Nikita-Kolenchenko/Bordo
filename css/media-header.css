@@ -1,0 +1,49 @@
+@import "./header.css";
+
+@media (hover: hover) {
+  .logo:hover {
+    color: #5e19149f;
+  }
+  .logo:active {
+    transform: scale(0.97);
+  }
+  #extendedMenu span a:active {
+    transform: scale(0.9);
+  }
+  .nav-a:active {
+    transform: scale(0.9);
+  }
+  .nav-a:hover {
+    color: #aaaaaa;
+  }
+  .contacts:active {
+    transform: scale(0.9);
+  }
+  .contacts:hover {
+    color: #9e2626;
+  }
+  header button:hover {
+    transform: scale(1.1);
+  }
+  header button:active {
+    transform: scale(0.8);
+  }
+}
+
+@media (hover: none) {
+  .logo:active {
+    transform: scale(0.97);
+  }
+  #extendedMenu span a:active {
+    transform: scale(0.9);
+  }
+  .nav-a:active {
+    transform: scale(0.9);
+  }
+  .contacts:active {
+    transform: scale(0.9);
+  }
+  header button:active {
+    transform: scale(0.8);
+  }
+}
