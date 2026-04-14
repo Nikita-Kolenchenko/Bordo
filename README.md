@@ -5,8 +5,8 @@ Bordo is a modern, responsive web application designed for restaurant digital me
 ## 🎥 Video Demonstration
 I have recorded a detailed walkthrough showing how the site looks on both Desktop and Mobile devices, along with its main features.
 
-* [Watch the Full Demo on YouTube]([(https://youtu.be/9XHa7sMlVEI?si=F_txbgNeH_KBEC7I)])
-* [Watch the Full Demo on YouTube]([(https://youtu.be/DhXmJHWAr2g?si=Iawtg8fyqa51WQFZ)])
+* [Watch the Full Demo on YouTube]([https://youtu.be/9XHa7sMlVEI?si=F_txbgNeH_KBEC7I])
+* [Watch the Full Demo on YouTube]([https://youtu.be/DhXmJHWAr2g?si=Iawtg8fyqa51WQFZ])
 
 ## ✨ Key Features
 * **Fully Responsive Design:** Optimized for a seamless experience on smartphones, tablets, and desktops.
