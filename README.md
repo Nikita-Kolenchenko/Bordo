@@ -24,4 +24,4 @@ You can see the difference in the layout in my videos. The project uses media qu
 ## 🚀 How to Run the Project
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/Nikita-Kolenchenko/Bordo.git](https://github.com/Nikita-Kolenchenko/Bordo.git)
+   git clone https://github.com/Nikita-Kolenchenko/Bordo.git
