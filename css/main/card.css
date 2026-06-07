@@ -143,8 +143,10 @@ article.card.is-flipped .card-inner {
 .card-front {
   background-color: #1e1e1e;
   border: 1px solid #333;
-  transition: all 0.3s ease;
+  transform: translateY(0px) rotateY(0);
+  transition: transform 0.3s ease;
   perspective: 1000px;
+  will-change: transform;
 }
 
 .card-back {
@@ -156,6 +158,8 @@ article.card.is-flipped .card-inner {
   border: 1px solid #333;
   perspective: 1000px;
   padding-bottom: 2px;
+  transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .card-back h3 {
@@ -168,10 +172,12 @@ article.card.is-flipped .card-inner {
   .card-front:hover {
     transform: translateY(-5px) rotateY(0);
     box-shadow: 0 10px 20px rgba(109, 0, 0, 0.4);
+    will-change: transform;
   }
   .card-back:hover {
     transform: translateY(-5px) rotateY(180deg);
     box-shadow: 0 10px 20px rgba(109, 0, 0, 0.4);
+    will-change: transform;
   }
 }
 
